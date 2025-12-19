@@ -5,14 +5,189 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Simmon</title>
 
+    <!--Tailwind-->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header></header>
+    <header class="header p-2">
+      <!--Logo-->
+      <div class="logo">
+        <a href="https://uniji.ac.id/"
+          ><img src="assets/logo.png" alt="uniji logo" class="w-full h-auto"
+        /></a>
+      </div>
 
-    <main></main>
+      <nav class="flex">
+        <a class="border p-2 rounded" href="#home-section">Home</a>
+        <a class="border p-2 rounded" href="#profile-section">Our Profile</a>
+        <a class="border p-2 rounded" href="#message-section">Message Us</a>
+      </nav>
+    </header>
 
-    <footer></footer>
+    <hr />
+
+    <main>
+      <!--Home Section-->
+      <section
+        id="home-section"
+        class="min-h-[500px] text-center content-center"
+      >
+        <h2 id="welcome-message" class="font-bold text-xl">Hello, Guest!</h2>
+        <p class="mt-2">Welcome to my portfolio website!</p>
+      </section>
+
+      <hr />
+
+      <!--Profile Section-->
+      <section
+        id="profile-section"
+        class="min-h-[500px] p-10 flex flex-row p-5"
+      >
+        <div class="rounded-[50%] basis-1/3 p-5">
+          <a
+            href="https://kabarmetro.id/wp-content/uploads/2024/02/IMG-20240204-WA0010.jpg"
+            ><img src="assets/tower.jpg" class="w-full h-auto rounded-[50%]"
+          /></a>
+        </div>
+        <div class="basis-2/3 p-5">
+          <h2 class="font-bold text-xl mt-4">Our Profile</h2>
+          <h3 class="font-bold mt-2">About the Company</h3>
+          <p>
+            University of Jakarta International (<a
+              href="https://uniji.ac.id/"
+              class="text-blue-500 underline"
+              >UNIJI</a
+            >) is a step forward taken by Jakarta International College in its
+            commitment to bringing quality education to all students in
+            Indonesia. Our programs are designed to prepare you for your future,
+            be it in building your career or starting your own business.
+          </p>
+          <h3 class="font-bold">Vision</h3>
+          <p>
+            <a href="https://uniji.ac.id/" class="text-blue-500 underline"
+              >UNIJI</a
+            >
+            has a vision to become a leading learning institution capable of
+            achieving an international reputation, which encourages innovation
+            and collaboration in the development of science for the advancement
+            of society.
+          </p>
+          <h3 class="font-bold">Mission</h3>
+          <p>
+            From the above vision,
+            <a href="https://uniji.ac.id/" class="text-blue-500 underline"
+              >UNIJI</a
+            >
+            developed the
+            <a href="https://uniji.ac.id/" class="text-blue-500 underline"
+              >UNIJI</a
+            >
+            mission as follows:
+          </p>
+          <ol class="list-decimal pl-5">
+            <li>
+              Developing an excellent learning institution with an international
+              reputation that is able to demonstrate the quality of a
+              world-class university.
+            </li>
+            <li>
+              Always improving the quality of education, research and innovation
+              in various fields that are the focus of
+              <a href="https://uniji.ac.id/" class="text-blue-500 underline"
+                >UNIJI</a
+              >, as stated in each faculty.
+            </li>
+            <li>
+              Encourage collaboration between academics, industry, and society
+              to create graduates who are able to compete globally, both as
+              intrapreneurs and entrepreneurs.
+            </li>
+            <li>
+              Able to provide solutions that contribute to social and economic
+              progress.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <hr />
+
+      <!--Message Us Section-->
+      <section
+        id="message-section"
+        class="min-h-[500px] mx-8 flex flex-row p-5"
+      >
+        <form class="basis-1/2 p-5" id="mes_us_form">
+          <h2 class="font-bold text-xl">Message Us</h2>
+          <p class="mt-2">This is the message us section.</p>
+          <div class="mt-4">
+            <label for="name" class="block">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="border p-2 rounded w-full"
+            />
+          </div>
+          <div class="mt-4">
+            <label for="email" class="block">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="border p-2 rounded w-full"
+            />
+          </div>
+          <div class="mt-4">
+            <label for="phone" class="block">Phone Number:</label>
+            <input
+              type="number"
+              id="phone"
+              name="phone"
+              class="border p-2 rounded w-full"
+            />
+          </div>
+          <div class="mt-4">
+            <label for="message" class="block">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              class="border p-2 rounded w-full h-32"
+            ></textarea>
+          </div>
+          <div class="mt-4">
+            <button
+              type="submit"
+              class="bg-blue-500 text-white p-2 rounded"
+              onclick="validateForm()"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+
+        <!--Validation for form-->
+        <div
+          class="min-w-1/2 h-hvh bg-gray-300 basis-1/2 border-[3px] p-5 rounded"
+        >
+          <h2 class="font-bold text-xl">Validation Messages</h2>
+          <div class="mt-2 px-5 break-words">
+            <!-- Validation messages will appear here -->
+            <p id="name_val">Name:</p>
+            <p id="email_val">Email:</p>
+            <p id="phone_val">Phone Number:</p>
+            <p id="mes_val">Message:</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <hr />
+      <p class="text-center p-4">Created by Simmon</p>
+    </footer>
 
     <script src="js/script.js"></script>
   </body>
